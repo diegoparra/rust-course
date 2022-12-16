@@ -56,4 +56,3 @@ fn main() {
     let shipping_one = ShippingBox::create_box(20.0, small_box, BoxColor::GREY);
     shipping_one.print_box_info();
 }
-
