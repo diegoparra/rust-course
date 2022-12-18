@@ -1,3 +1,4 @@
+#[derive(Clone, Copy)]
 struct Dimension {
     width: f64,
     height: f64,
@@ -55,4 +56,7 @@ fn main() {
 
     let shipping_one = ShippingBox::create_box(20.0, small_box, BoxColor::GREY);
     shipping_one.print_box_info();
+
+    let shipping_two = ShippingBox::create_box(20.0, small_box, BoxColor::GREY);
+    shipping_two.print_box_info();
 }
