@@ -4,11 +4,11 @@ struct Person {
     color: String,
 }
 
-fn print_name(name: &Person) {
-    println!("Name: {:?}", name.name)
+fn print_name(name: &str) {
+    println!("Name: {:?}", name)
 }
-fn print_color(color: &Person) {
-    println!("Favourite Color: {:?}", color.color)
+fn print_color(color: &str) {
+    println!("Favourite Color: {:?}", color)
 }
 
 fn main() {
@@ -32,8 +32,8 @@ fn main() {
 
     for p in people {
         if p.age <= 40 {
-            print_name(&p);
-            print_color(&p);
+            print_name(&p.name);
+            print_color(&p.color);
         }
     }
 }
