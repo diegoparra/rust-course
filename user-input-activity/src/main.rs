@@ -11,7 +11,7 @@ enum Computer {
 impl Computer {
     fn new(state: &str) -> Option<Computer> {
         let state = state.to_lowercase();
-        match state {
+        match state.as_str() {
             "off" => Some(Computer::Off),
             "sleep" => Some(Computer::Sleep),
             "reboot" => Some(Computer::Reboot),
