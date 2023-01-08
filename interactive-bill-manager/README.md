@@ -3,8 +3,9 @@
 
 ## User Stories:
 
-L1 - I want to add bills, including the name and amount owed
-L1 - I want to view existing bills
+- L1 - I want to add bills, including the name and amount owed
+- L1 - I want to view existing bills
+
 
   # Instructions:
     - We need a struct to store the bill 
