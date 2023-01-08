@@ -15,14 +15,10 @@ impl Bills {
     fn new() -> Self {
         Self { inner: vec![] }
     }
-
     fn add(&mut self, bill: Bill) {
-        self.inner.push(bill)
+        self.inner.push(bill);
     }
+    fn get_all(&self) -> Vec<Bill> {}
 }
 
-fn main_menu() {}
-
-fn main() {
-    println!("Hello, world!");
-}
+fn main() {}

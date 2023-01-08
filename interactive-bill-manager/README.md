@@ -10,9 +10,16 @@
   # Instructions:
     - We need a struct to store the bill 
     - We need a struct to store a Vec of bill
-    - We need to implement a function to create a new vector of bills
+    - We need to implement a function to create a new vector of empty bills that returns `Self`
     - We need to implement a function to add a new bill
+      - It needs to receive a mutable reference of self, and a bill of type `Bill`
     - We need to implement a function to get_all bills 
+      - It needs to receive a borrowed reference of self
+      - It needs to return a Vec of `Bill`
+       - Create a new variable bills with empty vec
+       - Run a for loop over `self.bills.values()`
+        - run a bills.push, tip: something with clone needs to be passed 
+      - return the bills
     - We need to create a function to get_input and it returns a `String`
       - We should stay run this part using while from the io::stdin()
       - use is_err() and return a error message
