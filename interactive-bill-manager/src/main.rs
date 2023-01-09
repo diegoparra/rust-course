@@ -2,6 +2,7 @@
 
 // L1: I want to add bills, including the name and the amount owed.
 
+#[derive(Debug, Clone)]
 struct Bill {
     name: String,
     amount: f64,
@@ -18,7 +19,9 @@ impl Bills {
     fn add(&mut self, bill: Bill) {
         self.inner.push(bill);
     }
-    fn get_all(&self) -> Vec<Bill> {}
+    fn get_all(&self) -> &Vec<Bill> {
+        &self.inner
+    }
 }
 
 fn main() {}

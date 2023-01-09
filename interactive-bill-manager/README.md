@@ -15,25 +15,22 @@
       - It needs to receive a mutable reference of self, and a bill of type `Bill`
     - We need to implement a function to get_all bills 
       - It needs to receive a borrowed reference of self
-      - It needs to return a Vec of `Bill`
-       - Create a new variable bills with empty vec
-       - Run a for loop over `self.bills.values()`
-        - run a bills.push, tip: something with clone needs to be passed 
-      - return the bills
+      - It needs to return a borrowed Vec of `Bill`
     - We need to create a function to get_input and it returns a `String`
-      - We should stay run this part using while from the io::stdin()
+      - Create an empty variable of type `String`
+      - We should stay running this part using while from the io::stdin()
       - use is_err() and return a error message
       - if everything goes well return the buffer and trim it
     - Create a main_menu function
-      - inside this function create another show function printing all the menu options
+      - inside this function create another function called `show` printing all the menu options
       - create a new mutable empty bills 
       - create a `loop` and start the show() function
-      - collect the user input
+      - collect the user input using the function `get_input`
       - run a match over the user input
-        - opt 1 add a new bill
-        - opt 2 view bill menu
+        - opt 1 call the function `add_bill_menu`
+        - opt 2 call the function `view_bill_menu`
         - all the others `break`
-    - Create a add_bill_menu function, it should receive e `&mut Bills`
+    - Create a add_bill_menu function, the signature should create a variable bills of type: `&mut Bills`
       - get the bill name calling the function get_input
       - create a new function outside of this one, called get_bill_amount
         - create a loop and call the get_input
