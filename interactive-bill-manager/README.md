@@ -32,14 +32,17 @@
         - all the others `break`
     - Create a add_bill_menu function, the signature should create a variable bills of type: `&mut Bills`
       - get the bill name calling the function get_input
-      - create a new function outside of this one, called get_bill_amount
-        - create a loop and call the get_input
-        - convert the input from `String` to `Result<f64, _>`, you can use the .parse() function
-        - match the parsed_input
-          Ok() => return the amount
-          Err(_) => print enter a number
-      - create a new bill object of type `Bill` and assing the values that was created from the bill name and amount
+      - create a variable amount and assing to it the value of `get_bill_amount`
+      - create a new bill variable of type `Bill` and assing the values that was created from the bill name and amount
       - call the add method from the bills passing the value created for the bill
       - Print that the bill was created
-    - Create a view_bill_menu function, it should receive a borrowed Bills
-      - iterate over bills using the for loop and print the bill
+    - Create a new function called get_bill_amount that returns a `f64`
+      - Print a message asking for the amount
+      - start a loop
+        - inside the loop create a variable `input` as type `String` inside loop and assing the value from the `get_input` function
+        - create a variable parsed_input as type `Result<f64, _>` and assing the result from input.parse()
+        - match over the parsed_input
+          Ok(amount) => return the amount
+          Err(_) => print the message: "enter a number"
+    - Create a view_bill_menu function, the function signature should has `bills` of type `&Bills`
+      - iterate over bills using the `for` loop and the method `.get_all()` and print the bill
